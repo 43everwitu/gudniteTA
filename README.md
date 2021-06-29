@@ -1,2 +1,2 @@
-# gutniteTA
-Project Website - Gutnite TA
+# gudniteTA
+Project Website - Gudnite TA
