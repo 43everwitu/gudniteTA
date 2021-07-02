@@ -74,17 +74,18 @@ body
 input
 {
     text-decoration: none;
-    width: 170px;
-    height: 30px;
+    min-width: 160px;
+    height: 35px;
     line-height:1.1em;
     padding: 0px 8px;
     margin-left: 10px;
     margin-right: 10px;
     align-items: center;
-    background: #ffffff;
-    color: #2b1055;
-    border-radius: 40px;
-    font-size: 1.3em;
+    background: rgba(100, 209, 243, 0.57);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    border-radius: 15px;
+    font-size: 1.2em;
 }
 
 #countingDay
