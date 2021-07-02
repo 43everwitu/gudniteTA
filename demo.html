@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width,initial-scale=1.0, user-scalable=yes"/>
+
+<title> Abbreviated Quote-Of-The-Day </title>
+<style>
+ #quoteOfDay { position: absolute; top: 120px; left: 150px; font-size: 1.5em; 
+               padding: 5px; width: 300px; background-color: yellow; 
+	       border: 3px solid blue; 
+             }
+</style>
+
+</head>
+<body>
+<div id="quoteOfDay" class="hide"></div>
+
+<!-- script src="quotes.js"></script -->
+<script>
+// Quotes -- abbreviated file contents from much larger quote list
+var quotes =
+`"Anything in life worth having is worth working for. - Andrew Carnegie",
+
+"Success often comes to those who dare to act. It seldom goes to the timid who 
+are ever afraid of the consequences. - Jawaharlal Nehru",
+
+"I just love when people say I can't do something because all my life people said I wasn't going to make it. - Ted Turner",
+
+"Success is never ending, failure is never final. - Dr. Robert Schuller",
+
+"Great thoughts speak only to the thoughtful mind, but great actions speak to all mankind. - Emily P. Bissell",
+
+"It takes a strong fish to swim against the current. Even a dead one can float with it. - John Crowe",
+
+"Obstacles are those frightful things you can see when you take your eyes off your goal. - Henry Ford",
+
+"You will never find time for anything. You must make it. - Charles Buxton",
+
+"Remove failure as an option. - Joan Lunden",
+
+"There is no one giant step that does it.its a lot of little steps-.Peter A Cohen",
+
+"Shoot for the moon. Even if you miss, you will land among the stars. - Les Brown",
+
+"Some of us have great runways already built for us. If you have one take off,
+but if you don't have one realise its your responsibility to grab a shovel 
+and build one for yourself and for those who will follow after you - Amelia Earhart ",
+ 
+"Work like you don't need the money. Love like you ve never been hurt. Dance like  nobody is watching. - Mark Twain",
+
+"What the mind of man can conceive and believe, it can achieve. - Napoleon Hill",
+
+"There are no secrets to success. It is the result of preparation, hard work, and 
+learning from failures - Colin Powell",
+
+"What lies behind us and what lies before us are tiny matters compared to what 
+lies within us. - Ralph Waldo Emerson",
+
+"Great works are performed not by strength but by perseverance.- Samuel  Johnson",
+
+"The difference between a successful person and others is not a lack of strength, 
+not a lack of knowledge, but rather a lack of will. - Vince Lombardi",
+
+"The man who follows the crowd will usually get no further than the crowd. The 
+man who walks alone is likely to find himself in places no one has ever been.-Alan Ashley-Pitt",
+
+"It takes 20 years to build a reputation and five minutes to ruin it. If you think 
+about that, you will do things differently. - Warren Buffett",
+
+"Champions aren't made in the gyms. Champions are made from something they 
+have deep inside them - a desire, a dream, a vision. - Muhammad Ali",
+
+"Dwell not on the past. Use it to illustrate a point, then leave it behind. Nothing 
+really matters except what you do now in this instant of time. From this moment 
+onwards you can be an entirely different person, filled with love and understanding,  
+
+ready with an outstretched hand, uplifted and positive in every thought and deed.- Eileen Caddy",
+
+"The critical ingredient is getting off your butt and doing something. Its as simple 
+as that. A lot of people have ideas, but there are few who decide to do something about them 
+now. Not tomorrow. Not next week. But today. The true entrepreneur is a doer.- Nolan Bushnell",
+
+"Whatever you vividly imagine, ardently desire, sincerely believe, and 
+enthusiastically act upon must inevitably come to pass - Paul J. Meyer",
+
+"Keep away from small people who try to belittle your ambitions. Small people 
+always do that, but the really great make you feel that you too can become great.- Mark Twain",
+
+"For anything worth having one must pay the price and the price is always work,patience, love, 
+self-sacrifice. No paper currency, no promises to pay, but the gold of real service.- John Burroughs",
+
+"To be successful, you must decide exactly what you want to accomplish, then resolve to pay the price to get it. - Bunker Hunt",
+
+"You just can't beat the person who never gives up. - Babe Ruth",
+
+"When you get right down to the root of the meaning of the word succeed, you 
+find it simply means to follow through. - F.W. Nichol",
+
+"Successful people are always looking for opportunities to help others. 
+Unsuccessful people are always asking, Whats in it for me? - Brian Tracy",
+
+"If you don't set goals, you can't regret not reaching them. - Yogi Berra",
+
+"Success is achieved by those who try and keep trying with a positive mental attitude. - W. Clement Stone",
+
+"I couldn't wait for success, so I went ahead without it. - Jonathan Winters"
+`.split('\n\n');
+</script>
+
+<script>
+// From: http://javascriptexample.net/b/?topic=get-day-of-year-script-bug-with-daylight-savings-time-and-2nd-bugat-midnight/
+Date.prototype.isLeapYear= function(){
+   return new Date(this.getFullYear(), 1, 29).getDate()==29;
+}
+// Get Day of Year
+Date.prototype.getDOY = function() {
+    var dayCount = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    var yn = this.getFullYear();
+    var mn = this.getMonth();
+    var dn = this.getDate();
+    var dayOfYear = dayCount[mn] + dn;
+    if(mn > 1 && this.isLeapYear()) dayOfYear++;
+    return dayOfYear;
+}
+
+function message(msgNumber) {
+  let d = new Date(),
+    DOY = d.getDOY();
+
+//  msgNumber = DOY;       // for file with 365+ quotes
+  msgNumber = (DOY % 31);  // abbreviated file with 30+ quotes
+  document.getElementById('quoteOfDay').innerHTML = quotes[msgNumber];
+}
+message(0);
+
+</script>
+
+</body>
+</html>

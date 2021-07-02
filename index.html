@@ -1,41 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
     <head> 
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-     <title>Gudnite Thảo Anh</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <title>Gudnite Thảo Anh</title>
+    <script type="text/javascript" src="g9quotes.js"></script>
     </head>
-    <body onload="startTime()">
-        <div id="txt"></div>
-        <div id='currentDate'></div>
-        <div id='quote'></div>
-        <div id='button'>
-            <div></div>
-            <div></div>
+    <body onload="startTime(); printQuotes() ; dayCounts()">
+        <div class="container">
+            <div id="txt"></div>
+            <div id='currentDate'></div>
+            <div id='todayQuote'></div>
+            <div id='button'>
+                <input type="button" value="Send message" onclick="window.open('http://www.m.me/petenguyen97')" />
+                <input type="button" value="Reset Quotes" onclick=printQuotes() />
         </div>
         <div id='beenGoodNight'></div>
-        <script>
-            function startTime() {
-              const today = new Date();
-              var options = {  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-              let curDate = today.toLocaleDateString('en-us', { weekday: 'long', day: 'numeric', month: 'long' });
-              let h = today.getHours();
-              let m = today.getMinutes();
-              let s = today.getSeconds();
-              m = checkTime(m);
-              s = checkTime(s);
-              document.getElementById('txt').innerHTML =  h + ":" + m;
-              document.getElementById('currentDate').innerHTML =  curDate;
-              setTimeout(startTime, 1000);
-            }
-            
-            function checkTime(i) {
-              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-              return i;
-            }
-            //dateFormat(today, "dddd, dS mmmm);
-            </script>
-            
+        </div>
     </body>
 </html>
