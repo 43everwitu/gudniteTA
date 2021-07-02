@@ -96,6 +96,6 @@ function dayCounts() {
   var countTime =  today.setHours(0,0,0,0) - startDay;
   var countDay = countTime / (1000 * 60 * 60 * 24);  
   console.log(countDay);
-  document.getElementById('beenGoodNight').innerHTML = '"Been '+ (countDay + 1) + ' Good nights"';
+  document.getElementById('beenGoodNight').innerHTML = 'Been '+ (countDay + 1) + ' Good Nights💤';
 }
 
