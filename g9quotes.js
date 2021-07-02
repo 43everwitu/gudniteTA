@@ -75,8 +75,8 @@ function startTime() {
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML =  h + ":" + m;
-    document.getElementById('currentDate').innerHTML =  curDate;
+    document.getElementById('txt').innerHTML =h + ":" + m;
+    document.getElementById('currentDate').innerHTML =curDate;
     setTimeout(startTime, 1000);
 }
   
