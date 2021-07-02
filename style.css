@@ -23,7 +23,8 @@ body
     padding-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-content: center;
+    align-items: center;
     font-style: normal;
     font-weight: 300;
 }
@@ -34,7 +35,7 @@ body
     font-size: 18px;
     display: flex;
     justify-content: center;
-    align-content: flex-start;
+    align-content: center;
     font-style: normal;
     font-weight: 300;
 }
@@ -72,7 +73,7 @@ input
     align-items: center;
 }
 
-div.container
+/*div.container
 {
     display: none;
 }
@@ -80,5 +81,4 @@ div.container
 @media only screen and ( max-width: 767px ) {
     div.container {
         display: block;
-    }
-}
+    }*/
