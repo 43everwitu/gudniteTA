@@ -2,6 +2,8 @@
     font-family: "San Francisco";
     src: url("https://applesocial.s 3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
   }
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 *
 {
     margin: 0;
@@ -54,8 +56,7 @@ body
     text-align: center;
     justify-content: center;
     align-content: center;
-    font-style: normal;
-    font-weight: 300;
+    font-family: 'Prata', serif;
 }
 
 #button 
