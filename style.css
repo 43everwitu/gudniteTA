@@ -49,7 +49,7 @@ body
 {
     position: relative;
     font-size: 20px;
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     margin-right: 30px;
     margin-left: 30px;
@@ -110,7 +110,7 @@ button
 #headrub
 {
     display: flex;
-    padding-top: 20px;
+    padding-top: 30px;
     flex-direction: column;
     position: relative;
     justify-content: center;
