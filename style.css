@@ -113,8 +113,9 @@ button
     align-content: center;
 }
 img.animated-gif{
-    max-width: 100%;
-    width: 60%;
+    display: flex;
+    align-items: flex-start; /* new */
+    max-width: 250px;
     height: auto; /* vary this to your needs ie auto, 100%, etc */
     margin: 0 auto;
 }
