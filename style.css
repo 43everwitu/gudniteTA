@@ -112,6 +112,10 @@ button
     justify-content: center;
     align-content: center;
 }
+img.animated-gif{
+    width: 250px;
+    height: auto;
+  }
 
 /*div.container
 {
