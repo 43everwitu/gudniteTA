@@ -15,7 +15,7 @@
 
 body
 {
-    background-image: url(bg1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(bg1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
